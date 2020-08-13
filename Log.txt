@@ -1,0 +1,186 @@
+1597117983169,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,1485
+1597117984701,3164,select skuid from goods where price>= 100 and price<=200;,113
+1597117984929,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,12
+1597117984942,3164,select skuid from goods where price>= 500 and cate = 71;,140
+1597117985144,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,8
+1597117985153,3164,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,3494
+1597117988717,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,5
+1597117988724,3164,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,6028
+1597117994838,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,5
+1597117994848,3164,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1088
+1597117995982,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,4
+1597117995988,3164,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,4
+1597117996038,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,4
+1597117996043,3164,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1277
+1597117997363,3164,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,31
+1597117997395,3164,select skuid from goods,67
+1597126176003,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,1116
+1597126177151,3282,select skuid from goods where price>= 100 and price<=200;,153
+1597126177455,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,5
+1597126177461,3282,select skuid from goods where price>= 500 and cate = 71;,51
+1597126177577,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,4
+1597126177582,3282,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,3128
+1597126180783,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,6
+1597126180791,3282,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,2284
+1597126183120,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,8
+1597126183129,3282,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,940
+1597126184396,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,5
+1597126184405,3282,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,34
+1597126184484,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,7
+1597126184492,3282,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,968
+1597126185509,3282,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root class org.example.jdbcDemo,11
+1597126185521,3282,select skuid from goods,52
+1597214504123,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4583
+1597214508846,12733,select skuid from goods where price>= 100 and price<=200;,595
+1597214510541,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,23
+1597214510567,12733,select skuid from goods where price>= 500 and cate = 71;,104
+1597214510757,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597214510767,12733,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,6198
+1597214517081,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,11
+1597214517093,12733,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,4956
+1597214522122,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,11
+1597214522134,12733,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,2601
+1597214524825,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,26
+1597214524908,12733,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,146
+1597214525133,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597214525140,12733,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,4099
+1597214529310,12733,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,113
+1597214529430,12733,select skuid from goods,259
+1597217206706,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4397
+1597217211248,12941,select skuid from goods where price>= 100 and price<=200;,456
+1597217212468,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,11
+1597217212482,12941,select skuid from goods where price>= 500 and cate = 71;,97
+1597217212652,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597217212660,12941,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,4801
+1597217217531,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,8
+1597217217540,12941,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,3090
+1597217220714,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,8
+1597217220723,12941,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1334
+1597217222132,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,10
+1597217222151,12941,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,10
+1597217222238,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,5
+1597217222244,12941,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1430
+1597217223749,12941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,47
+1597217223805,12941,select skuid from goods,107
+1597217306330,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,2841
+1597217309355,12991,select skuid from goods where price>= 100 and price<=200;,237
+1597217310389,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,8
+1597217310399,12991,select skuid from goods where price>= 500 and cate = 71;,120
+1597217310609,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,8
+1597217310619,12991,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,4916
+1597217315618,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,12
+1597217315631,12991,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,4155
+1597217319870,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4
+1597217319875,12991,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1542
+1597217321492,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597217321512,12991,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,9
+1597217321600,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,10
+1597217321612,12991,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1707
+1597217323407,12991,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,91
+1597217323502,12991,select skuid from goods,72
+1597217623854,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,3603
+1597217627592,13009,select skuid from goods where price>= 100 and price<=200;,254
+1597217628701,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,12
+1597217628715,13009,select skuid from goods where price>= 500 and cate = 71;,83
+1597217628903,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,10
+1597217628915,13009,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,5970
+1597217635031,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,11
+1597217635043,13009,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,4651
+1597217639810,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,14
+1597217639826,13009,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,2195
+1597217643512,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,23
+1597217643550,13009,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,18
+1597217643919,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,14
+1597217643935,13009,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,2096
+1597217646133,13009,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,135
+1597217646281,13009,select skuid from goods,176
+1597217751809,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,3795
+1597217755875,13029,select skuid from goods where price>= 100 and price<=200;,244
+1597217756916,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,10
+1597217756928,13029,select skuid from goods where price>= 500 and cate = 71;,184
+1597217757194,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597217757203,13029,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,7234
+1597217764567,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,8
+1597217764576,13029,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,4818
+1597217769477,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,10
+1597217769490,13029,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1747
+1597217771326,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597217771342,13029,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,9
+1597217771433,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,7
+1597217771440,13029,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1670
+1597217773193,13029,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,139
+1597217773339,13029,select skuid from goods,143
+1597219887839,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6836
+1597219895165,13305,select skuid from goods where price>= 100 and price<=200;,1170
+1597219898464,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,42
+1597219898522,13305,select skuid from goods where price>= 500 and cate = 71;,200
+1597219898813,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,32
+1597219898849,13305,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,17326
+1597219916379,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,31
+1597219916411,13305,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,11653
+1597219928203,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,13
+1597219928217,13305,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1537
+1597219929844,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597219929857,13305,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,23
+1597219929973,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597219929984,13305,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,3055
+1597219933119,13305,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,149
+1597219933272,13305,select skuid from goods,209
+1597292306840,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,2686
+1597292309614,795,select skuid from goods where price>= 100 and price<=200;,187
+1597292310350,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4
+1597292310354,795,select skuid from goods where price>= 500 and cate = 71;,52
+1597292310568,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,2
+1597292310571,795,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,2697
+1597292313426,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597292313434,795,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,2549
+1597292316161,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,7
+1597292316170,795,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,974
+1597292317305,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4
+1597292317312,795,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,54
+1597292317529,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,7
+1597292317538,795,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1262
+1597292318945,795,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,4
+1597292318950,795,select skuid from goods,48
+1597293550497,864,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1852
+1597293552409,864,select skuid from goods where price>= 100 and price<=200;,82
+1597293600930,875,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1466
+1597293602459,875,select skuid from goods where price>= 100 and price<=200;,98
+1597293666944,924,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1657
+1597293668680,924,select skuid from goods where price>= 100 and price<=200;,91
+1597293848646,941,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1942
+1597293850658,941,select skuid from goods where price>= 100 and price<=200;,88
+1597293967403,955,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1496
+1597293968985,955,select skuid from goods where price>= 100 and price<=200;,131
+1597294030562,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1266
+1597294031897,982,select skuid from goods where price>= 100 and price<=200;,81
+1597294032576,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,3
+1597294032580,982,select skuid from goods where price>= 500 and cate = 71;,49
+1597294032815,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,5
+1597294032822,982,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,2110
+1597294035106,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,7
+1597294035114,982,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,2247
+1597294037553,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597294037561,982,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,1012
+1597294038751,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,13
+1597294038768,982,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,3
+1597294038944,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597294038950,982,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,2030
+1597294041160,982,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,28
+1597294041190,982,select skuid from goods,52
+1597294070874,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,1556
+1597294072502,996,select skuid from goods where price>= 100 and price<=200;,104
+1597294073231,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,3
+1597294073235,996,select skuid from goods where price>= 500 and cate = 71;,47
+1597294073438,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597294073445,996,select useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71 group by useid;,2037
+1597294075658,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,6
+1597294075665,996,select distinct useid from orders,goods where goods.skuid= orders.skuid and goods.cate = 71;,2146
+1597294077979,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,7
+1597294077987,996,select orders.skuid,orders.o_date,goods.price from orders left join goods on orders.skuid=goods.skuid where useid=80 order by price limit 0,3;,941
+1597294079106,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,5
+1597294079115,996,insert into orders (useid,skuid,orderid,o_date,o_area,o_sku_num) values ('80','33948','999999',str_to_date('2020-07-17','%Y-%m-%d'),1,1);,2
+1597294079260,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,9
+1597294079269,996,delete from orders where o_date=str_to_date('2020-07-17','%Y-%m-%d');,1014
+1597294080461,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,43
+1597294080508,996,select skuid from goods,79
