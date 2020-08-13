@@ -22,6 +22,34 @@ public class MonitorLog {
     //日志开关
     public static String logSwitch = "1";
 
+    public static String User;
+    public static String database;
+    public static String Port;
+
+    public static String getUser() {
+        return User;
+    }
+
+    public static void setUser(String user) {
+        User = user;
+    }
+
+    public static String getDatabase() {
+        return database;
+    }
+
+    public static void setDatabase(String database) {
+        MonitorLog.database = database;
+    }
+
+    public static String getPort() {
+        return Port;
+    }
+
+    public static void setPort(String port) {
+        Port = port;
+    }
+
     public static String getProcessID() {
         return processID;
     }
@@ -156,7 +184,7 @@ public class MonitorLog {
         JSONObject in_jsonObject = new JSONObject();
         jsonObject.put("topic","test");
 //        String[] key = {"timestamp_sql","processID","sql_Content","cost_Time","applicationName","moduleName","processName","instanceNumber"};
-        String[] key = {"timestamp_sql","processID","sql_Content","cost_Time"};
+        String[] key = {"timestamp_sql","processID","sql_Content","cost_Time","database","user","port"};
         for(int index =0; index<key.length;index++){
             in_jsonObject.put(key[index],str[index]);
         }
@@ -207,8 +235,6 @@ public class MonitorLog {
             connection.connect();
             OutputStreamWriter out = new OutputStreamWriter(connection.getOutputStream(), "UTF-8"); // utf-8编码
             out.write(String.valueOf(jsonObject));
-
-
 
             out.flush();
             out.close();
@@ -277,7 +303,7 @@ public class MonitorLog {
         String startTime = Long.toString(start);
         String costTime = Long.toString(cost);
 
-        String message = startTime+","+processID+","+sql+","+costTime;
+        String message = startTime+","+processID+","+sql+","+costTime+","+database+","+User+","+Port;
         String res = "";
         if(logSwitch.equals("1")){
         FileWriter fw = null;
@@ -310,16 +336,13 @@ public class MonitorLog {
         }
         //传递给 Kafka，通过Post请求
 
-        String[] str ={String.valueOf(start),processID,sql,String.valueOf(cost)};
-
+        String[] str ={String.valueOf(start),processID,sql,String.valueOf(cost),database,User,Port};
+//"database","user","port"
         JSONObject jsonObject = strTojson(str);
         postToKafa(url,jsonObject);
 
         //传驱动名
-        String logCache=MonitorLog.sendDriverMessage("logCache.txt");
-        if (logCache.length()>1){
-            MonitorLog.postToKafa( "http://113.106.111.75:5040/demo/kafka/produce" ,MonitorLog.strTojson1(logCache.split(",")));
-        }
+
         return res;
     }
 

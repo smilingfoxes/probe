@@ -105,6 +105,18 @@ public class Test implements ClassFileTransformer {
                 ad.addLocalVariable("sql", pool.get("java.lang.String"));
                 ad.insertBefore("sql = $2;");
                 ad.insertAfter("org.example.MonitorLog.setSql(sql);");
+
+                ad.addLocalVariable("Database",pool.get("java.lang.String"));
+                ad.addLocalVariable("User",pool.get("java.lang.String"));
+                ad.addLocalVariable("HostPort",pool.get("java.lang.String"));
+                ad.insertBefore("Database=$1.getDatabase();");
+                ad.insertBefore("User=$1.getUser();");
+                ad.insertBefore("HostPort=$1.getHostPortPair();");
+                ad.insertAfter("org.example.MonitorLog.setUser(User);");
+                ad.insertAfter("org.example.MonitorLog.setPort(HostPort);");
+                ad.insertAfter("org.example.MonitorLog.setDatabase(Database);");
+
+
 //                ad.insertAfter("System.out.println(\"<------A PreparedStatement object. This step is for SQL. Achieved by com/mysql/cj/jdbc/ClientPreparedStatement.------>\");");
 //                ad.insertAfter("System.out.println(\"sql:\"+sql);");
 
@@ -118,6 +130,7 @@ public class Test implements ClassFileTransformer {
                 ct.addLocalVariable("cost", CtClass.longType);
                 ct.insertAfter("cost = System.currentTimeMillis()-start;");
 
+
 //                ct.insertAfter("System.out.println(\"<------A PreparedStatement executeQuery(). Achieved by com/mysql/cj/jdbc/ClientPreparedStatement.------>\");");
 //                ct.insertAfter("System.out.println(\"start:\"+start);");
 //                ct.insertAfter("System.out.println(\"processID:\"+id);");
@@ -130,6 +143,15 @@ public class Test implements ClassFileTransformer {
                 ct.addLocalVariable("log_res", pool.get("java.lang.String"));
 //                ct.insertAfter("log_res = org.example.MonitorLog.writeLog(o_start,o_processID,o_sql,o_cost);");
 
+                ct.addLocalVariable("Database",pool.get("java.lang.String"));
+                ct.addLocalVariable("User",pool.get("java.lang.String"));
+                ct.addLocalVariable("HostPort",pool.get("java.lang.String"));
+                ct.insertBefore("Database=this.connection.getDatabase();");
+                ct.insertBefore("User=this.connection.getUser();");
+                ct.insertBefore("HostPort=this.connection.getHostPortPair();");
+                ct.insertAfter("org.example.MonitorLog.setUser(User);");
+                ct.insertAfter("org.example.MonitorLog.setPort(HostPort);");
+                ct.insertAfter("org.example.MonitorLog.setDatabase(Database);");
 
                 ct.insertAfter("log_res = org.example.MonitorLog.tests();");
 
@@ -154,22 +176,13 @@ public class Test implements ClassFileTransformer {
                 inserDelete.insertAfter("org.example.MonitorLog.setCost(cost);");
                 inserDelete.insertAfter("org.example.MonitorLog.setProcessID(id);");
 
+
                 inserDelete.addLocalVariable("log_res", pool.get("java.lang.String"));
 //                ct.insertAfter("log_res = org.example.MonitorLog.writeLog(o_start,o_processID,o_sql,o_cost);");
 
-
                 inserDelete.insertAfter("log_res = org.example.MonitorLog.tests();");
-
                 byte[] ddbytes =cl.toBytecode();
                 return ddbytes;
-            }
-            else if(className.equals("java/sql/DriverManager")) {
-                CtMethod[] arr = cl.getDeclaredMethods();
-                logExceptionDriver(arr,cl);
-                byte[] dmbytes = JudgeDriver(pool,cl).toBytecode();
-
-
-                return dmbytes;
             }
 
         } catch (NotFoundException | IOException | CannotCompileException e) {
@@ -249,13 +262,15 @@ public static CtClass JudgeDriver(ClassPool pool,CtClass ctClass) throws CannotC
         pm.insertAfter("org.example.MonitorLog.setSql(sql);");
         pm.insertAfter("org.example.MonitorLog.setProcessID(id);");
 
+        //<..数据库名，用户面，端口>
+
 
 //        SqlExecuteTime(pool,clazz);
 
 //        输出至日志文档
         pm.addLocalVariable("log_res",pool.get("java.lang.String"));
 //        pm.insertAfter("log_res = org.example.MonitorLog.tests();");
-        pm.insertAfter("log_res = org.example.MonitorLog.writeLog(start,id,sql,cost);");
+      //  pm.insertAfter("log_res = org.example.MonitorLog.writeLog(start,id,sql,cost);");
 
 //        return clazz;
     }
@@ -328,11 +343,21 @@ public static CtClass JudgeDriver(ClassPool pool,CtClass ctClass) throws CannotC
 //        em.insertAfter("System.out.println(\"cost:\"+cost);");
 
 //        输出至日志文档
+        em.addLocalVariable("Database",pool.get("java.lang.String"));
+        em.addLocalVariable("User",pool.get("java.lang.String"));
+        em.addLocalVariable("HostPort",pool.get("java.lang.String"));
+        em.insertBefore("Database=this.connection.getDatabase();");
+        em.insertBefore("User=this.connection.getUser();");
+        em.insertBefore("HostPort=this.connection.getHostPortPair();");
+        em.insertAfter("org.example.MonitorLog.setUser(User);");
+        em.insertAfter("org.example.MonitorLog.setPort(HostPort);");
+        em.insertAfter("org.example.MonitorLog.setDatabase(Database);");
+
+
         em.insertAfter("org.example.MonitorLog.setSql(sql);");
         em.insertAfter("org.example.MonitorLog.setCost(cost);");
         em.insertAfter("org.example.MonitorLog.setStart(start);");
         em.insertAfter("org.example.MonitorLog.setProcessID(id);");
-
         em.addLocalVariable("log_res",pool.get("java.lang.String"));
 //        em.insertAfter("log_res = org.example.MonitorLog.writeLog(start,id,sql,cost);");
 
