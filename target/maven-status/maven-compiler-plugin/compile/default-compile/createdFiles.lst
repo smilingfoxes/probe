@@ -3,5 +3,7 @@ org/example/MethodStrings.class
 org/example/jdbcDemo.class
 org/example/jdbcPremain.class
 org/example/ProcessId.class
+org/example/testdemo.class
 org/example/Test.class
 org/example/hellw.class
+org/example/jsonTokafaka.class

@@ -185,3 +185,5 @@
 1597294080461,996,jdbc:mysql://localhost:3306/icbc?useSSL=false&serverTimezone=UTC&characterEncoding=utf-8&allowPublicKeyRetrieval=true {user=root, password=Sr617917} class org.example.jdbcDemo,43
 1597294080508,996,select skuid from goods,79
 1597369857298,2335,select skuid from goods where price>= 100 and price<=200;,271,icbc,root,localhost:3306
+1597372440051,2548,select skuid from goods where price>= 100 and price<=200;,227,icbc,root,localhost:3306
+1597372916630,2633,select skuid from goods where price>= 100 and price<=200;,215,icbc,root,localhost:3306

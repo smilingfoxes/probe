@@ -11,12 +11,12 @@ import java.util.Arrays;
 
 public class Test implements ClassFileTransformer {
 
-    public  static  String postToKafa = MethodStrings.postToKafa.getMethod();
+//    public  static  String postToKafa = MethodStrings.postToKafa.getMethod();
     public  static String readlog = MethodStrings.readlog.getMethod();
     public  static String getProcessId=MethodStrings.getProcessId.getMethod();
     public  static  String Stringlog = MethodStrings.Stringlog.getMethod();
     public  static  String logExceptionAndCache=MethodStrings.logExceptionAndCache.getMethod();
-    public  static String strTojson = MethodStrings.strTojson.getMethod();
+//    public  static String strTojson = MethodStrings.strTojson.getMethod();
 
     //<.............>
     public  static String[] agentargs = jdbcPremain.getAgentargs().split("&");
